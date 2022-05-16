@@ -1,41 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>{{componentName}}</h1>
-    <input type="text" [(ngModel)] = "productName">{{productName}} 
-    <br>
-    <button (click)="onHandleClick()">Click</button>
-    {{ isStatus }}
-    
-    <div *ngIf ="isStatus">
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Stt</th>
-                <th>Tên sản phẩm</th>
-                <th>Gía sản phẩm</th>
-                <th>Trang thai</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let product of Productlist ; let i = index">
-                <td>{{ i + 1}}</td>
-                <td>1</td>
-                <td>{{product.name}}</td>
-                <td>{{product.price}}</td>
-                <td>{{product.status ? "Con hang" : "Het hang"}}</td>
-                <td>
-                    <button class="btn btn-danger" (click)="onHandleDelete(product.id)">Delete</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-</body>
-</html>
+<table class="table table-bordererd">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.status ? "Còn hàng" : "hết hàng" }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="onHandleDelete(product.id)">
+            Delete
+          </button>
+          <button class="btn btn-info ms-1" (click)="onHandleGetInfo(product)">
+            Detail
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="detail" *ngIf="productDetail">
+    <hr />
+    <h2>Product Detail Component</h2>
+    <app-product-detail [product]="productDetail"></app-product-detail>
+    <router-outlet></router-outlet>
+  </div>
+  

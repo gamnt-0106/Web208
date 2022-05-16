@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IProduct } from '../model/Product';
 
 @Component({
   selector: 'app-products',
@@ -6,29 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  componentName:string = "List Product";
-  isStatus = false;
-
-  productName :string = "";
-  Productlist :{id:number,name:string,price:number,status:boolean}[]=[
-    {id:1,name:"Product 1" , price:12345,status:false},
-    {id:2,name:"Product 2" , price:12345,status:true},
-
-  ]
-
+  @Input() products!: IProduct[]
+  productDetail!: IProduct;
   constructor() { }
 
   ngOnInit(): void {
-    
   }
-  onHandleClick(){
-    console.log(1);
-    this.isStatus = !this.isStatus
+  onHandleDelete(id: number) {
+    this.products = this.products.filter(product => product.id !== id);
   }
-  onHandleDelete(id:number) {
-    console.log(id);
-    this.Productlist = this.Productlist.filter(product => product.id ! == id)
-    
+  onHandleGetInfo(product: IProduct) {
+    this.productDetail = product;
+    console.log('product', product)
   }
-
 }
