@@ -11,6 +11,8 @@ import { PagesComponent } from './pages/pages.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import{HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -21,12 +23,14 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     PagesComponent,
     ProductAddComponent,
     HeaderComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    HomepageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
 
   ],
   providers: [],

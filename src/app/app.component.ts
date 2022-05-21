@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import data from './data';
 import { IProduct } from './model/Product';
 
 @Component({
@@ -6,24 +7,11 @@ import { IProduct } from './model/Product';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  productList: IProduct[] = [
-    {
-      id: 1,
-      name: "product A",
-      price: 200,
-      status: false
-    },
-    {
-      id: 2,
-      name: "product B",
-      price: 300,
-      status: true
+ export class AppComponent {
+    productList: IProduct[] = data;
+  
+    onHandleAdd(product: any) {
+      console.log(product);
+      this.productList.push(product);
     }
-  ]
-  onHandleAdd(product: any) {
-    console.log('prduct', product);
-    this.productList.push(product);
   }
-}
-
