@@ -1,7 +1,40 @@
 {
   "products": [
-    { "id": 1, "name": "Product A", "price": 100, "status": true },
-    { "id": 2, "name": "Product B", "price": 200, "status": true },
-    { "id": 3, "name": "Product C", "price": 300, "status": true }
+    {
+      "id": 1,
+      "name": "Product 77777",
+      "price": 100,
+      "status": true
+    },
+    {
+      "name": "heeeeeheee222",
+      "price": 44444,
+      "status": true,
+      "id": 2
+    },
+    {
+      "name": "san pham 123",
+      "price": 456,
+      "status": true,
+      "id": 3
+    },
+    {
+      "name": "productbA",
+      "price": 4444,
+      "status": true,
+      "id": 4
+    },
+    {
+      "name": "gamnt",
+      "price": 123456,
+      "status": true,
+      "id": 5
+    },
+    {
+      "name": "phanhhh",
+      "price": 3456,
+      "status": true,
+      "id": 6
+    }
   ]
 }

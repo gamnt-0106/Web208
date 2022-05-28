@@ -1,10 +1,40 @@
-<table class="table table-bordererd">
+<nz-table #basicTable [nzData]="data">
+  <thead>
+      <button><a href="product/add">Add</a></button>
+      <tr>
+          <th>STT</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Address</th>
+          <th>Action</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let data of basicTable.data;  let i= index">
+          <td>{{i + 1}}</td>
+          <td>{{data.name}}</td>
+          <td>{{data.price}}</td>
+          <td>{{data.status ? "Còn hàng":"Hết hàng"}}</td>
+          <td>
+              <button class="btn btn-danger" (click)="onHandleRemove(data.id!)">Delete </button>
+              <button class="btn btn-info ms-1">Detail</button>
+          </td>
+      </tr>
+  </tbody>
+</nz-table>
+
+
+
+
+
+<!-- <table class="table table-bordererd">
   <thead>
     <tr>
       <th>#</th>
       <th>Name</th>
       <th>Price</th>
       <th>Status</th>
+      <th>Action</th>
       <th></th>
     </tr>
   </thead>
@@ -15,9 +45,9 @@
       <td>{{ product.price }}</td>
       <td>{{ product.status ? "Còn hàng" : "hết hàng" }}</td>
       <td>
-        <button class="btn btn-danger">Delete</button>
+        <button class="btn btn-danger" (click)="onHandleRemove(product.id!)">Delete</button>
         <button class="btn btn-info ms-1">Detail</button>
       </td>
     </tr>
   </tbody>
-</table>
+</table> -->

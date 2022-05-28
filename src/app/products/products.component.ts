@@ -8,9 +8,9 @@ import { ProductService } from '../services/product.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  products!: IProduct[]
+  data!: IProduct[]
   constructor(private productService: ProductService) { }
-  
+
   ngOnInit(): void {
     // chạy
     this.getProductList();
@@ -19,7 +19,12 @@ export class ProductsComponent implements OnInit {
   // khai báo
   getProductList() {
     this.productService.getProductList().subscribe(data => {
-      this.products = data;
+      this.data = data;
+    })
+  }
+  onHandleRemove(id:number){
+    this.productService.removeProduct(id).subscribe(()=>{
+      this.data = this.data.filter(item => item .id !== id);
     })
   }
 

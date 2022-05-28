@@ -7,26 +7,27 @@ import { IProduct } from '../model/Product';
   providedIn: 'root'
 })
 export class ProductService {
-  constructor(  private http: HttpClient
+  API_URL =`http://localhost:3000/products/`
+  constructor(  
+    private http: HttpClient
     ) {
   
    }
-  getProduct(id: any) :Observable<IProduct>{
-    //return data.find(item => item.id == id)
-    return this.http.get<IProduct>(`http://localhost:3000/products/${id}`);
+   getProduct(id: any): Observable<IProduct> {
+    // return data.find(item => item.id === id);
+    return this.http.get<IProduct>(`${this.API_URL}/${id}`);
   }
   getProductList(): Observable<IProduct[]> {
-    return this.http.get<IProduct[]>(`http://localhost:3000/products`);
+    return this.http.get<IProduct[]>(`${this.API_URL}`);
   }
-  removeProduct() {
-
+  removeProduct(id: number): Observable<IProduct> {
+    return this.http.delete<IProduct>(`${this.API_URL}/${id}`);
   }
-  addProduct()  {
-    // return this.http.addProduct<IProduct[]>(`http://localhost:3000/products`)
-
+  addProduct(product: IProduct): Observable<IProduct> {
+    return this.http.post<IProduct>(`${this.API_URL}`, product);
   }
-  updateProduct() {
-
+  updateProduct(product: IProduct): Observable<IProduct> {
+    return this.http.put<IProduct>(`${this.API_URL}/${product.id}`, product);
   }
 }
 // B1: Khai báo HttpClientModule trong app.module.ts
