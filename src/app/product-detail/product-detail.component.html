@@ -1,4 +1,141 @@
-<div>
-    {{ product.name }}
-    {{ product.price }}
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<style>
+    @media (max-width : 640px) {
+        .row {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (max-width : 1200px) and (min-width:340px) {
+        .row {
+            display: grid;
+            grid-template-columns: 1fr;
+            text-align: center;
+            padding-left: 0rem;
+            padding-right: 0rem;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .mt-2 {
+            margin: auto;
+        }
+
+        .font-bold {
+            font-size: 30px;
+            margin-top: 10px;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+      <header>
+        <div class="">
+            <nav class="menu">
+                <ul class=" flex : px-3 : justify-end : mx-11">
+                    <li class="px-5 py-5"><a href="" class=" text-xl">Home</a></li>
+                    <li class="px-5 py-5"><a href="work" class="text-xl">Works</a></li>
+                    <li class="px-5 py-5"><a href="blog" class=" text-xl">Blog</a></li>
+                    <li class="px-5 py-5"><a href="" class="text-xl">Contact</a></li>
+                    <li class="px-5 py-5"><a href="" class=" text-xl">Signin</a></li>
+                    <li class="px-5 py-5"><a href="" class=" text-xl">Signup</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    </div>
+    <div class="small-container single-product">
+        <div class="row">
+            <div class="col-2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK3-_-RTwDwXpSPD9VxpyytvX8sIKDAr0doA&usqp=CAU" alt="">
+                <br>
+                <div class="small-img-row">
+                    <div class="small-img-rol">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs2bXvyL5z3Hl5Ll1qqF3AvUqllon2kRcPsQ&usqp=CAU" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-rol">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2o-0VLoAfn6L1NF-XlVoJm8FbIHGAbRJNjw&usqp=CAU" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-rol">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs7iVvfAL6Bom4d2g_MOFrAvprBITPQvF6ZKfYV9M5d1Tt1U0rAVI3wCVtCLYMuReVMiY&usqp=CAU" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-rol">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz6_PycS6Z6GrvMOYbTsndGBIiJkwfGlN-ITbRCLbJTKd08E9owrlFg-LJgAeWJLXOiG8&usqp=CAU" width="100%" class="small-img">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-2">
+                <p>Home / T-Shirt</p>
+                <h1>{{product.name}}</h1>
+                <h4>{{product.price}}</h4>
+<select>
+                    <option>Select Size</option>
+                    <option>XXL</option>
+                    <option>XL</option>
+                    <option>Large</option>
+                    <option>Medium</option>
+                    <option>Small</option>
+                </select>
+                    <input type="number" value="1">
+                    <a href="" class="btn">Add To Card</a>
+                    <h3>Product Detail
+                        <i class="fa fa-indent"></i>
+                    </h3>
+                    <br>
+                    <p>{{product.subject}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone</p>
+                    <div class="app-logo">
+                        <img src="https://admin.worldwaterweek.org/wp-content/uploads/2019/08/app_store_badge_-342x114.png">
+                        <img src="https://www.informatique-mania.com/wp-content/uploads/2020/12/Logo-app-Instalcion-Google-Play-Store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <p>Our Purpose Is To Sustainably Make the Pleasure and
+                        Benefits of Sports Accessible to the Many</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="Copyright">Copyright 2020 - By QuocHuy</p>
+        </div>
+    </div>
+</body>
+
+</html>
+

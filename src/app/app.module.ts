@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
-import { AboutComponent } from './about/about.component';
 import { ProductsComponent } from './products/products.component';
 import { FormsModule } from '@angular/forms';
 import { PagesComponent } from './pages/pages.component';
@@ -21,13 +20,21 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzImageModule } from 'ng-zorro-antd/image';
+import { WorksComponent } from './works/works.component';
+import { BlogComponent } from './blog/blog.component';
+import { SigninComponent } from './auth/signin/signin.component';
+import { SignupComponent } from './auth/signup/signup.component';
+
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloComponent,
-    AboutComponent,
+  
     ProductsComponent,
     PagesComponent,
     ProductAddComponent,
@@ -36,6 +43,10 @@ registerLocaleData(en);
     HomepageComponent,
     NotfoundComponent,
     HomeComponent,
+    WorksComponent,
+    BlogComponent,
+    SigninComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,10 +54,14 @@ registerLocaleData(en);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NzTableModule
+    NzTableModule,
+    NzMenuModule,
+    NzLayoutModule ,
+    NzImageModule
+
 
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }],
-  bootstrap: [AppComponent]
-})
+    providers: [{ provide: NZ_I18N, useValue: en_US }],
+    bootstrap: [AppComponent]
+  })
 export class AppModule { }

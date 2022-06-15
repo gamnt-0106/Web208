@@ -27,5 +27,10 @@ export class ProductsComponent implements OnInit {
       this.data = this.data.filter(item => item .id !== id);
     })
   }
+    onHandleUpdate(product:IProduct){
+      this.productService.updateProduct(product).subscribe(()=>{
+        this.data = this.data.filter(item => item .id === product.id ? product :item);
+      })
+  }
 
 }

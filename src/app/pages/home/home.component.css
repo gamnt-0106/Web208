@@ -1,0 +1,17 @@
+@media (max-width : 640px) {
+    .row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width : 1200px) and (min-width:340px) {
+    .row {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

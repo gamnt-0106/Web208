@@ -1,40 +1,41 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Product 77777",
-      "price": 100,
-      "status": true
+      "name": "ahcdjchjncx",
+      "price": 5500,
+      "status": true,
+      "subject": "Amet minim mollit non deserunt ullamco ",
+      "id": 8
     },
     {
-      "name": "heeeeeheee222",
-      "price": 44444,
+      "name": "nước hoa",
+      "price": 12344,
       "status": true,
+      "subject": "  Velit officia consequat duis enim velit mollit.",
+      "id": 9
+    },
+    {
+      "name": "ferrrrmaaa",
+      "price": 623455,
+      "status": true,
+      "subject": "  Velit officia consequat duis enim velit mollit.",
+      "id": 10
+    }
+  ],
+  "users": [
+    {
+      "email": "gamnt1210106@gmail.com",
+      "password": "$2a$10$jtbQF85B3XfxAon14ZxcW.3tq4szltZRfZSGV3J5qDebYteI8TtG.",
+      "username": "nguyen gam",
+      "role": 1,
+      "id": 1
+    },
+    {
+      "email": "gamgam@gmail.com",
+      "password": "$2a$10$No/wHKkXuVyVyoRgH2zW9edd3lTtDLUHDLfsX2Y7DjRUsBT0v8wpy",
+      "username": "gam gam",
+      "role": 1,
       "id": 2
-    },
-    {
-      "name": "san pham 123",
-      "price": 456,
-      "status": true,
-      "id": 3
-    },
-    {
-      "name": "productbA",
-      "price": 4444,
-      "status": true,
-      "id": 4
-    },
-    {
-      "name": "gamnt",
-      "price": 123456,
-      "status": true,
-      "id": 5
-    },
-    {
-      "name": "phanhhh",
-      "price": 3456,
-      "status": true,
-      "id": 6
     }
   ]
 }
